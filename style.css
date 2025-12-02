@@ -1100,6 +1100,19 @@ footer a:focus-visible {
     gap: 16px;
   }
 
+  /* スマホのフロー画像の見切れ・余白対策 */
+  .flow-media {
+    height: auto;
+  }
+
+  .flow-media img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh; /* 画面高の過半を超えないように調整 */
+    object-fit: contain;
+    object-position: center;
+  }
+
   .flow-meta {
     flex-wrap: wrap;
     gap: 8px;
