@@ -702,9 +702,8 @@ div[class$="-wrapper"] {
   margin: 0 auto;
   padding: var(--section-space) var(--gutter);
 }
-
 .message-wrapper img {
-  max-width: 480px;
+  max-width: 380px;
   border-radius: var(--radius-medium);
   box-shadow: var(--shadow-soft);
 }
