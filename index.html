@@ -8,6 +8,10 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <!-- 日本語表示用の丸みフォント（見出し用） -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- シャープでパキッとした日本語ゴシック（見出しに適用） -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 
     <style>
@@ -40,6 +44,16 @@
             <!--ページ内に飛ばすには＃を打つ必要あり-->
         </div>
     </header>
+    <!-- ヒーローセクションを追加: 開いた瞬間に目を引くキャッチとCTA -->
+    <section class="hero" aria-label="ヒーローセクション">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">⚽</div>
+            <h1 class="hero-title"><span id="hero-typed">圧倒的基礎×実践型指導</span></h1>
+            <p class="hero-sub">楽しさ×基礎練習で、明日のプレーが変わる。</p>
+            <a class="btn-cta" href="contact.html">体験申し込みはこちら</a>
+        </div>
+    </section>
     <div class="top-wrapper">
         <div class="mv">
             <div class="top-img">
@@ -330,7 +344,8 @@
             </ul>
         </div>
     </footer>
-</body>
+        <script src="main.js" defer></script>
+    </body>
 
 </html>
 <!--font A P-OTF 汐舟 Min2-->
