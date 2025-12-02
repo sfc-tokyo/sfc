@@ -1,49 +1,125 @@
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 2000); // 2秒ごとに画像を切り替える
-}
-
-// シンプルなタイプライター効果（#hero-typed に表示）
+// 画像スライダー
 document.addEventListener('DOMContentLoaded', function () {
-    var el = document.getElementById('hero-typed');
-    if (!el) return;
-    var phrases = ["圧倒的基礎！", "楽しさで伸びる！", "未来のプレーヤーを育てる！"];
-    var currentPhrase = 0;
-    var currentChar = 0;
-    var typing = true;
+    const header = document.querySelector('header');
+    const navToggle = document.querySelector('.js-nav-toggle');
+    const navList = document.querySelector('#primary-nav');
 
-    function tick() {
-        var text = phrases[currentPhrase];
-        if (typing) {
-            currentChar++;
-            el.textContent = text.slice(0, currentChar);
-            if (currentChar === text.length) {
-                typing = false;
-                setTimeout(tick, 1200);
-            } else {
-                setTimeout(tick, 80);
+    if (header && navToggle && navList) {
+        const closeNav = () => {
+            header.classList.remove('nav-open');
+            navToggle.classList.remove('is-active');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = header.classList.toggle('nav-open');
+            navToggle.classList.toggle('is-active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        navList.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+                closeNav();
             }
-        } else {
-            currentChar--;
-            el.textContent = text.slice(0, currentChar);
-            if (currentChar === 0) {
-                typing = true;
-                currentPhrase = (currentPhrase + 1) % phrases.length;
-                setTimeout(tick, 200);
-            } else {
-                setTimeout(tick, 40);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (header.classList.contains('nav-open') && !header.contains(event.target)) {
+                closeNav();
             }
-        }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && header.classList.contains('nav-open')) {
+                closeNav();
+                navToggle.focus();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 767 && header.classList.contains('nav-open')) {
+                closeNav();
+            }
+        });
     }
-    tick();
+
+    const sliderTrack = document.querySelector('.js-slider');
+    if (!sliderTrack) {
+        return;
+    }
+
+    const sliderWindow = sliderTrack.closest('.slider-window');
+    const slides = Array.from(sliderTrack.querySelectorAll('.js-slide'));
+    const dots = Array.from(document.querySelectorAll('.js-dot'));
+    const prevBtn = sliderWindow?.querySelector('.slider-control--prev');
+    const nextBtn = sliderWindow?.querySelector('.slider-control--next');
+    let current = 0;
+    let autoTimer;
+    const interval = 4500;
+
+    const activate = (index) => {
+        slides.forEach((slide, idx) => {
+            const isActive = idx === index;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+        dots.forEach((dot, idx) => {
+            const isActive = idx === index;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+        sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+        current = index;
+    };
+
+    const goTo = (index) => {
+        if (!slides.length) {
+            return;
+        }
+        const nextIndex = (index + slides.length) % slides.length;
+        activate(nextIndex);
+    };
+
+    const startAuto = () => {
+        if (slides.length < 2) {
+            return;
+        }
+        stopAuto();
+        autoTimer = setInterval(() => {
+            goTo(current + 1);
+        }, interval);
+    };
+
+    const stopAuto = () => {
+        if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
+        }
+    };
+
+    prevBtn?.addEventListener('click', () => {
+        goTo(current - 1);
+        startAuto();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+        goTo(current + 1);
+        startAuto();
+    });
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            goTo(idx);
+            startAuto();
+        });
+
+        dot.addEventListener('mouseenter', stopAuto);
+        dot.addEventListener('mouseleave', startAuto);
+    });
+
+    sliderWindow?.addEventListener('mouseenter', stopAuto);
+    sliderWindow?.addEventListener('mouseleave', startAuto);
+
+    activate(current);
+    startAuto();
 });

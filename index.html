@@ -33,9 +33,14 @@
                 <img src="img/S__76890124.jpg" alt="">
             </div>
             <p>品川ユナイテッドアカデミー</p>
+            <button class="nav-toggle js-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <div class="header-right">
-            <ul>
+            <ul id="primary-nav">
                 <li><a href="">HOME</a></li>
                 <li><a href="#crab">クラブ紹介</a></li>
                 <li><a href="#katudo">活動内容</a></li>
@@ -49,24 +54,45 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">⚽</div>
-            <h1 class="hero-title"><span id="hero-typed">圧倒的基礎×実践型指導</span></h1>
+            <h1 class="hero-title">
+                <span class="hero-title__part">圧倒的基礎</span>
+                <span class="hero-title__cross">×</span>
+                <span class="hero-title__part">実践型指導</span>
+            </h1>
             <p class="hero-sub">楽しさ×基礎練習で、明日のプレーが変わる。</p>
             <a class="btn-cta" href="contact.html">体験申し込みはこちら</a>
         </div>
     </section>
-    <div class="top-wrapper">
-        <div class="mv">
-            <div class="top-img">
-                <img src="img/S__62316551_0.jpg" alt="img">
+    <section class="feature-slider" aria-label="活動風景ギャラリー">
+        <div class="slider-window">
+            <div class="slider-track js-slider">
+                <figure class="slider-slide js-slide is-active">
+                    <img src="/img/IMG_2791.JPG" alt="基礎トレーニングに集中する子どもたち">
+                </figure>
+                <figure class="slider-slide js-slide">
+                    <img src="/img/S__62316552_0.jpg" alt="パスワークの連携を確認する選手たち">
+                </figure>
+                <figure class="slider-slide js-slide">
+                    <img src="/img/S__62316551_0.jpg" alt="試合形式でゴールを狙う子どもたち">
+                </figure>
+                <figure class="slider-slide js-slide">
+                    <img src="/img/IMG_2792.JPG" alt="送別会で笑顔を見せるクラブメンバー">
+                </figure>
             </div>
-            <div class="top-img">
-                <img src="img/S__62316549_0.jpg" alt="img">
-            </div>
-            <div class="top-img">
-                <img src="img/S__62316553_0.jpg" alt="img">
-            </div>
+            <button class="slider-control slider-control--prev" type="button" aria-label="前のスライド">
+                <span aria-hidden="true">&#10094;</span>
+            </button>
+            <button class="slider-control slider-control--next" type="button" aria-label="次のスライド">
+                <span aria-hidden="true">&#10095;</span>
+            </button>
         </div>
-    </div>
+        <div class="slider-dots" role="tablist" aria-label="スライド切り替え">
+            <button class="slider-dot js-dot is-active" type="button" aria-label="1枚目を表示"></button>
+            <button class="slider-dot js-dot" type="button" aria-label="2枚目を表示"></button>
+            <button class="slider-dot js-dot" type="button" aria-label="3枚目を表示"></button>
+            <button class="slider-dot js-dot" type="button" aria-label="4枚目を表示"></button>
+        </div>
+    </section>
     <div class="lesson-wrapper">
         <div class="container">
             <div class="heading" id="crab">
@@ -126,211 +152,142 @@
             </div>
 
         </div> <!-- container-service-wrapper 終わり -->
-        <!--<h2>コーチ陣の紹介</h2>
-            </div>    
-                <div class="container-service">
-                    <div class="service">
-                        <img src="img/S__61857849.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：常國蓮太朗</div>
-                        <p>
-                        広尾フットボールアカデミー
-                        芝浜サッカークリニック
-                        駒場ユナイテッド
-                        資格
-                        東京都サッカー協会公認4級審判員
-                        東京都サッカー協会公認D級コーチ
-                    </p>
-                    </div>      
-                </div>
-                <!--<div class="container-service">
-                    <div class="service">
-                        <img src="img/S__76890124.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：田部井悠</div>
-                        <p>ここに紹介文とか、コーチのメッセージを書く</p>
-                    </div>    
-                </div>
-                <div class="container-service">
-                    <div class="service">
-                        <img src="img/S__76890124.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：江波戸輝</div>
-                        <p>ここに紹介文とか、コーチのメッセージを書くsssssssssssSSSSSSSSSSSSSSSSSSSSSSSSSSS
-                            sssssssssssssssssssssssssssssssssss</p>
-                    </div>      
-                </div>
-                <!--<div class="container-service">
-                    <div class="service">
-                        <img src="img/S__76890124.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：高橋蒼空</div>
-                        <p>ここに紹介文とか、コーチのメッセージを書く</p>
-                    </div>--      
-                </div>
-                <div class="container-service">
-                    <div class="service">
-                        <img src="img/S__76890124.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：江波戸輝</div>
-                        <p>ここに紹介文とか、コーチのメッセージを書くsssssssssssSSSSSSSSSSSSSSSSSSSSSSSSSSS
-                            sssssssssssssssssssssssssssssssssss</p>
-                    </div>      
-                </div>
-                <!--<div class="container-service">
-                    <div class="service">
-                        <img src="img/S__76890124.jpg" alt="コーチの写真">
-                        <div class="ttl">名前：高橋蒼空</div>
-                        <p>ここに紹介文とか、コーチのメッセージを書く</p>
-                    </div>--   
-                </div>-->
     </div>
-    </div>
-    <div class="detail-wrapper" id="katudo">
-        <h2>活動内容</h2>
-        <p><b>活動日:
-                毎週火曜日　17:00〜18:00<br>
-            </b> </p>
-        <p><b>活動場所: 品川区立小山台小学校</b></p>
-        <p><b>〒142-0061 東京都品川区小山台１丁目１８−２４</b></p>
-        <p><b>アクセス方法: 武蔵小山駅から徒歩7分</p>
-
-    </div>
-    <div class="c-section">
-        <h1 class="c-heading1 u-center"><span class="main">1日の流れ</span></h1>
-
-
-        <p class="text">サッカーが初めてでも、運動が苦手でも大丈夫！<br />
-            優しいコーチが楽しく指導していきます。</p>
-
-
-        <h2 class="c-heading2"><span class="main">01. はじまりのあいさつ</span></h2>
-
-        <div class="c-grid2 c-grid2--2x">
-
-            <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                <p class="text">まずはコーチとお友達に大きな声でご挨拶。<br />
-                    今日はどんな練習をするのか聞きましょう。</p>
-
-
-                <p class="text u-right"><span style="color:rgb(255, 0, 0);">「よろしくお願いします！」<br />
-                        「今日も一緒に頑張ろう！」</span></p>
+    <section class="schedule" id="katudo">
+        <div class="container">
+            <div class="schedule-header">
+                <span class="section-tag">SCHEDULE</span>
+                <h2>活動スケジュール</h2>
+                <p>毎週火曜日の夕方、学校帰りにそのまま参加できる時間帯で実施しています。</p>
             </div>
-
+            <div class="schedule-grid">
+                <article class="schedule-card">
+                    <h3>開催日時</h3>
+                    <p class="schedule-emphasis">毎週火曜日<br>17:00 - 18:00</p>
+                    <p>集合は16:50を目安に、ウォーミングアップからスタートします。</p>
+                </article>
+                <article class="schedule-card">
+                    <h3>会場</h3>
+                    <p class="schedule-emphasis">品川区立小山台小学校</p>
+                    <p>〒142-0061 東京都品川区小山台1-18-24<br>武蔵小山駅 徒歩7分</p>
+                </article>
+                <article class="schedule-card">
+                    <h3>対象学年</h3>
+                    <ul class="schedule-list">
+                        <li>小学1年生〜小学6年生</li>
+                        <li>男女問わず参加可能</li>
+                    </ul>
+                    <p>初めての参加でも安心して体験できます。</p>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div class="c-grid2__item6 sp-item12 c-gutter">
-
-            <p class="c-image c-image--center js-image-size-sync">
-                <img src="" alt="" class="u-pc-media"><img src="" alt="" class="u-sp-media">
-            </p>
-
-
-        </div>
-
-    </div>
-
-
-    </div>
-    </div>
-
-    <div class="c-section">
-        <div class="c-section c-section--offset-cut" style="background-color: #f5f5f5;">
-            <div class="c-section__vertical c-gutter-2x">
-                <h2 class="c-heading2"><span class="main">02. ウォーミングアップ</span></h2>
-
-                <div class="c-grid2 c-grid2--2x">
-
-                    <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                        <p class="text">グラウンドを2周走って、しっかり体操。<br />
-                                        体を温めて、ケガのないように準備します！<br />
-                        </p>
-
-
-                        <p class="text u-right"><span style="color:rgb(255, 0, 0);">「負けないよ〜！」<br />
-                                「僕だって負けないぞ〜！」</span></p>
-
-
+    <section class="day-flow" aria-label="1日の流れ">
+        <div class="container">
+            <div class="flow-header">
+                <span class="section-tag">DAILY ROUTINE</span>
+                <h2>トレーニングの流れ</h2>
+                <p>60分のセッションを通じて、集中して学びながら楽しめる構成です。</p>
+            </div>
+            <div class="flow-timeline">
+                <article class="flow-item">
+                    <div class="flow-content">
+                        <div class="flow-meta">
+                            <span class="flow-step">STEP 01</span>
+                            <span class="flow-time">17:00</span>
+                        </div>
+                        <h3>集合 & 挨拶</h3>
+                        <p>元気な挨拶で練習スタート。今日のテーマとポイントをコーチが共有します。</p>
+                        <ul class="flow-points">
+                            <li>体調確認とウォームアップ準備</li>
+                            <li>プレーの目標を一人ずつ決める</li>
+                        </ul>
                     </div>
-
-                    <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                        <p class="c-image c-image--center js-image-size-sync">
-                            <img src="" alt="" class="u-pc-media"><img src="" alt="" class="u-sp-media">
-                        </p>
-
-
+                    <figure class="flow-media">
+                        <img src="/img/S__62316549_0.jpg" alt="集合して挨拶をする子どもたち">
+                    </figure>
+                </article>
+                <article class="flow-item">
+                    <div class="flow-content">
+                        <div class="flow-meta">
+                            <span class="flow-step">STEP 02</span>
+                            <span class="flow-time">17:05</span>
+                        </div>
+                        <h3>ウォーミングアップ</h3>
+                        <p>ランニングと動的ストレッチで身体を温め、ボールタッチの感覚を呼び起こします。</p>
+                        <ul class="flow-points">
+                            <li>ステップワーク＆スプリント</li>
+                            <li>リアクションゲームで頭と身体を起こす</li>
+                        </ul>
                     </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="c-section">
-        <div class="c-section__vertical c-gutter-2x">
-
-            <h2 class="c-heading2"><span class="main">03. 基礎練習</span></h2>
-
-            <div class="c-grid2 c-grid2--2x">
-
-                <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                    <p class="text">サッカーの基本の「パス」や「トラップ」、<br />
-                        「ドリブル」マーカーを使ってチーム対抗で競争したりと<br />
-                        仲間と一緒に練習をしていきます。</p>
-
-
-                    <p class="text u-right"><span style="color:rgb(255, 0, 0);">「基礎はとっても大事！」</span></p>
-
-
-                </div>
-
-                <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                    <p class="c-image c-image--center js-image-size-sync">
-                        <img src="" alt="" class="u-pc-media"><img src="" alt="" class="u-sp-media">
-                    </p>
-
-
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="c-section">
-        <div class="c-section c-section--offset-cut" style="background-color: #f5f5f5;">
-            <div class="c-section__vertical c-gutter-2x">
-                <h2 class="c-heading2"><span class="main">04. ミニゲーム</span></h2>
-
-                <div class="c-grid2 c-grid2--2x">
-
-                    <div class="c-grid2__item6 sp-item12 c-gutter">
-
-                        <p class="text">練習の最後には、実戦練習として<br />
-                            ミニゲームを実施します。コーチもゲームに混ざりながら指導していきます。<br />
-                            <br />
-                            素敵なプレーをしたら皆で褒めあおう！
-                        </p>
-
-
-                        <p class="text u-right"><span style="color:rgb(255, 0, 0);">「試合があると最後までたのしい！」<br />
-                                「コーチが大きい声でアドバイスしてくれるから頑張れるしうまくなるよ！」</span></p>
+                    <figure class="flow-media">
+                        <img src="/img/IMG_2794.JPG" alt="ウォーミングアップする子どもたち">
+                    </figure>
+                </article>
+                <article class="flow-item">
+                    <div class="flow-content">
+                        <div class="flow-meta">
+                            <span class="flow-step">STEP 03</span>
+                            <span class="flow-time">17:15</span>
+                        </div>
+                        <h3>スキルトレーニング</h3>
+                        <p>パス・トラップ・ドリブルのテーマ練習。スキルレベル別に強度を変えながら基礎力を底上げします。</p>
+                        <ul class="flow-points">
+                            <li>状況判断を養う対人ドリル</li>
+                            <li>ポジションに合わせたボールタッチ</li>
+                        </ul>
                     </div>
+                    <figure class="flow-media">
+                        <img src="img/S__62316552_0.jpg" alt="コーチの指導でスキル練習する様子">
+                    </figure>
+                </article>
+                <article class="flow-item">
+                    <div class="flow-content">
+                        <div class="flow-meta">
+                            <span class="flow-step">STEP 04</span>
+                            <span class="flow-time">17:40</span>
+                        </div>
+                        <h3>ゲーム & フィードバック</h3>
+                        <p>ミニゲームで実戦に近い判断を体験。最後は振り返りで良かったプレーを全員で共有します。</p>
+                        <ul class="flow-points">
+                            <li>コーチがプレーに入りながら声かけ</li>
+                            <li>「できたこと」を仲間と称え合う時間</li>
+                        </ul>
+                    </div>
+                    <figure class="flow-media">
+                        <img src="/img/0559A1CB-BCF7-41B1-A251-9F68F5CC550E.jpeg" alt="ミニゲームを楽しむ子どもたち">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-cta" id="osirase">
+        <div class="container">
+            <div class="join-card">
+                <div class="join-copy">
+                    <span class="section-tag">JOIN US</span>
+                    <h2>まずは無料体験から</h2>
+                    <p>体験は随時受付中。お子さまのレベルに合わせたメニューで、安心してご参加いただけます。</p>
+                    <ul class="join-list">
+                        <li>シューズと飲み物とボールをご用意ください</li>
+                        <li>保護者の方はピッチサイドで観覧いただけます</li>
+                    </ul>
+                </div>
+                <div class="join-actions">
+                    <a class="btn-cta btn-cta--light" href="contact.html">体験申し込みはこちら</a>
+                    <p class="join-contact">お電話：<a href="tel:08043271816">080-4327-1816</a></p>
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </section>
 
 
     <footer>
-        <div class="footer-wrapper" id="osirase">
+        <div class="footer-wrapper">
             <p>お問い合わせ</p>
             <ul>
-                <li><a href="contact.html">体験はこちらから！</a></li>
                 <li>お電話：08043271816<a href=""></a></li>
                 <li>メールアドレス：rentarou.tsunekuni@icloud.com</li>
                 <li>
@@ -344,7 +301,7 @@
             </ul>
         </div>
     </footer>
-        <script src="main.js" defer></script>
+        <script type="module" src="./main.js"></script>
     </body>
 
 </html>
