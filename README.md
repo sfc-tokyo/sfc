@@ -30,6 +30,12 @@ yarn build
 # 出力は dist/ に生成
 ```
 
+## GitHub Pages（本番デプロイ）
+- このリポジトリは GitHub Actions で `yarn build` → `dist/` を GitHub Pages にデプロイします（`.github/workflows/deploy.yml`）。
+- GitHub の Repository → Settings → Pages → Source を **GitHub Actions** に設定してください。
+  - ブランチ（`main`）直配信にすると、`parents.js` 等が未ビルドのまま配信されて `@supabase/supabase-js` の解決エラーが出ます。
+- `main` に push すると自動でデプロイされます（Actions タブで進捗確認）。
+
 ## 保護者限定ポータル（Next.js）
 開発:
 ```zsh
