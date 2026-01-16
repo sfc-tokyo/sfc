@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>保護者限定ギャラリー | 品川ユナイテッドアカデミー</title>
+  <meta name="description" content="品川ユナイテッドアカデミーの保護者限定写真ギャラリー" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <!-- フォント（元のホームページと統一） -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="img/S__76890124.jpg" alt="" />
+      </div>
+      <p>品川ユナイテッドアカデミー</p>
+      <button class="nav-toggle js-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-right">
+      <ul id="primary-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#crab">クラブ紹介</a></li>
+        <li><a href="index.html#katudo">活動内容</a></li>
+        <li><a href="gallery.html">最新情報！</a></li>
+        <li><a href="parents.html">保護者用</a></li>
+        <li><a href="index.html#osirase">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 28px; padding-bottom: 40px;">
+    <div class="heading">
+      <h2>ブログ（保護者限定）</h2>
+      <p class="club-description">ログイン後に、運営が承認した「保護者限定」の投稿を表示します。</p>
+    </div>
+
+    <noscript>
+      <p class="muted">保護者用のログインにはJavaScriptが必要です。ブラウザ設定でJavaScriptを有効にしてください。</p>
+    </noscript>
+
+    <div id="parents-auth" class="gallery-auth">
+      <div class="gallery-auth__row">
+        <label class="gallery-auth__field">
+          <span>メールアドレス</span>
+          <input id="parents-email" type="email" placeholder="you@example.com" autocomplete="email" />
+        </label>
+        <button id="parents-send" class="gallery-auth__btn" type="button">ログインリンクを送る</button>
+      </div>
+      <p id="parents-auth-msg" class="muted"></p>
+    </div>
+
+    <div id="parents-user" class="gallery-user" hidden>
+      <span id="parents-user-email" class="muted"></span>
+      <button id="parents-logout" class="gallery-auth__btn" type="button">ログアウト</button>
+    </div>
+
+    <p id="parents-status" class="muted"></p>
+    <div id="parents-grid" class="gallery-grid" aria-live="polite"></div>
+  </main>
+
+  <script type="module" src="parents.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

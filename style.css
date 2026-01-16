@@ -55,6 +55,10 @@ img {
   padding: 0 var(--gutter);
 }
 
+.muted {
+  color: var(--text-muted);
+}
+
 /* Header */
 header {
   position: fixed;
@@ -686,6 +690,7 @@ div[class$="-wrapper"] {
   font-family: var(--heading-font);
   font-size: clamp(26px, 4vw, 32px);
   margin-bottom: 18px;
+  margin-top: 50px;
 }
 
 .club-description {
@@ -1157,4 +1162,144 @@ footer a:focus-visible {
     width: 100%;
     max-width: 360px;
   }
+}
+
+/* 公開ギャラリー（gallery.html） */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.gallery-card {
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+
+.gallery-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.gallery-card__title {
+  font-weight: 800;
+}
+
+.gallery-card__date {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.gallery-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery-card__body {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.gallery-card__by {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.gallery-divider {
+  border: none;
+  border-top: 1px solid rgba(127, 127, 127, 0.25);
+  margin: 28px 0;
+}
+
+.gallery-auth {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.gallery-auth__row {
+  display: grid;
+  gap: 10px;
+  align-items: end;
+}
+
+@media (min-width: 720px) {
+  .gallery-auth__row {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.gallery-auth__field {
+  display: grid;
+  gap: 6px;
+}
+
+.gallery-auth__field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  background: #fff;
+}
+
+.gallery-auth__btn {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 800;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery-auth__btn:hover,
+.gallery-auth__btn:focus-visible {
+  background: var(--accent-dark);
+}
+
+.gallery-user {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gallery-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.gallery-action-btn {
+  appearance: none;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.gallery-action-btn:hover,
+.gallery-action-btn:focus-visible {
+  border-color: rgba(127, 127, 127, 0.45);
+}
+
+.gallery-action-btn[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>最新情報！ | 品川ユナイテッドアカデミー</title>
+  <meta name="description" content="品川ユナイテッドアカデミーの活動写真ギャラリー" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <!-- フォント（元のホームページと統一） -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="img/S__76890124.jpg" alt="" />
+      </div>
+      <p>品川ユナイテッドアカデミー</p>
+      <button class="nav-toggle js-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-right">
+      <ul id="primary-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#crab">クラブ紹介</a></li>
+        <li><a href="index.html#katudo">活動内容</a></li>
+        <li><a href="gallery.html">最新情報！</a></li>
+        <li><a href="parents.html">保護者用</a></li>
+        <li><a href="index.html#osirase">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 28px; padding-bottom: 40px;">
+    <div class="heading">
+      <h2>最新情報！（一般公開）</h2>
+      <p class="club-description">運営が承認した「一般公開」の投稿のみ表示します。</p>
+    </div>
+
+    <p id="gallery-status" class="muted"></p>
+    <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+  </main>
+
+  <script type="module" src="gallery.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
