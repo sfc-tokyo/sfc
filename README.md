@@ -7,7 +7,7 @@ Vite を使った静的サイト（HTML/CSS/JS）。
 - 保護者限定ポータル（`parents-portal/`：招待制ログイン + 写真投稿 + 運営承認 + 公開/限定の出し分け）
 
 ## セットアップ
-- 必要: Node.js 18+ / Yarn 1.x
+- 必要: Node.js 20+ / Yarn 1.x
 - 初回のみ:
   - `yarn install`
 
