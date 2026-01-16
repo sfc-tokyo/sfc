@@ -34,6 +34,10 @@ yarn build
 - このリポジトリは GitHub Actions で `yarn build` → `dist/` を GitHub Pages にデプロイします（`.github/workflows/deploy.yml`）。
 - GitHub の Repository → Settings → Pages → Source を **GitHub Actions** に設定してください。
   - ブランチ（`main`）直配信にすると、`parents.js` 等が未ビルドのまま配信されて `@supabase/supabase-js` の解決エラーが出ます。
+- Supabase の値は Actions のビルド時に注入します。Repository の
+  - Settings → Secrets and variables → Actions で以下を登録してください（SecretsでもVariablesでもOK）。
+    - `VITE_SUPABASE_URL`
+    - `VITE_SUPABASE_ANON_KEY`
 - `main` に push すると自動でデプロイされます（Actions タブで進捗確認）。
 
 ## 保護者限定ポータル（Next.js）
